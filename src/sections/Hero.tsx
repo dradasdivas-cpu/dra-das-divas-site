@@ -13,7 +13,7 @@ export function Hero() {
         <img
           src="/images/hero-banner.png"
           alt="Dra das Divas - Estética Avançada"
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover object-[center_15%] md:object-[center_20%]"
         />
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-brown-dark via-brown-dark/60 to-transparent" />
@@ -26,19 +26,6 @@ export function Hero() {
       {/* Content */}
       <div className="relative z-20 container-custom pt-32 pb-20">
         <div className="max-w-3xl">
-          {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold/10 border border-gold/30 mb-8"
-          >
-            <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
-            <span className="text-gold text-sm font-medium tracking-wide">
-              Bióloga Esteta • Especialista em Harmonização
-            </span>
-          </motion.div>
-
           {/* Main Title */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
