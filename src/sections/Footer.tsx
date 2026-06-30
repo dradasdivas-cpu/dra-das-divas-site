@@ -158,8 +158,16 @@ export function Footer() {
             © {new Date().getFullYear()} Dra das Divas. Todos os direitos reservados.
           </p>
           
-          <p className="text-cream/40 text-sm flex items-center gap-1">
-            Feito com <Heart size={14} className="text-gold fill-gold" /> em Rio de Janeiro
+          <p className="text-cream/40 text-sm">
+            Desenvolvido por{' '}
+            <a
+              href="https://www.fton.com.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gold hover:text-gold/80 transition-colors"
+            >
+              Faith Traffic Solution
+            </a>
           </p>
         </div>
 
