@@ -1,4 +1,4 @@
-import { Instagram as InstagramIcon, MessageCircle, Heart } from 'lucide-react';
+import { Instagram as InstagramIcon, MessageCircle } from 'lucide-react';
 
 const quickLinks = [
   { name: 'Início', href: '#hero' },
