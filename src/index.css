@@ -1,0 +1,185 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Brand Colors - Dra das Divas */
+    --gold: 43 52% 59%;
+    --gold-light: 46 65% 53%;
+    --gold-dark: 43 75% 31%;
+    --brown: 28 26% 13%;
+    --brown-dark: 28 24% 8%;
+    --cream: 38 33% 94%;
+    
+    /* shadcn variables mapped to brand */
+    --background: 28 26% 13%;
+    --foreground: 38 33% 94%;
+    --card: 28 22% 15%;
+    --card-foreground: 38 33% 94%;
+    --popover: 28 22% 15%;
+    --popover-foreground: 38 33% 94%;
+    --primary: 43 52% 59%;
+    --primary-foreground: 28 26% 13%;
+    --secondary: 38 33% 94%;
+    --secondary-foreground: 28 26% 13%;
+    --muted: 28 15% 25%;
+    --muted-foreground: 38 15% 65%;
+    --accent: 43 52% 59%;
+    --accent-foreground: 28 26% 13%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 28 15% 25%;
+    --input: 28 15% 25%;
+    --ring: 43 52% 59%;
+    --radius: 0.625rem;
+    --sidebar-background: 28 24% 8%;
+    --sidebar-foreground: 38 33% 94%;
+    --sidebar-primary: 43 52% 59%;
+    --sidebar-primary-foreground: 28 26% 13%;
+    --sidebar-accent: 28 15% 25%;
+    --sidebar-accent-foreground: 38 33% 94%;
+    --sidebar-border: 28 15% 20%;
+    --sidebar-ring: 43 52% 59%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-brown-dark text-cream font-sans antialiased;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-medium tracking-tight;
+  }
+  
+  ::selection {
+    @apply bg-gold/30 text-cream;
+  }
+}
+
+@layer components {
+  /* Gold gradient text */
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-gold via-gold-light to-gold bg-clip-text text-transparent;
+    background-size: 200% auto;
+  }
+  
+  /* Gold button styles */
+  .btn-gold {
+    @apply relative overflow-hidden bg-gradient-to-r from-gold via-gold-light to-gold text-brown-dark font-medium px-8 py-4 rounded-pill transition-all duration-300;
+    background-size: 200% auto;
+  }
+  
+  .btn-gold:hover {
+    @apply shadow-gold-lg;
+    background-position: right center;
+    transform: translateY(-2px);
+  }
+  
+  /* Outline gold button */
+  .btn-outline-gold {
+    @apply relative border-2 border-gold text-gold font-medium px-8 py-4 rounded-pill transition-all duration-300;
+  }
+  
+  .btn-outline-gold:hover {
+    @apply bg-gold text-brown-dark shadow-gold;
+    transform: translateY(-2px);
+  }
+  
+  /* Glass card effect */
+  .card-glass {
+    @apply bg-brown/60 backdrop-blur-md border border-gold/20 rounded-2xl;
+  }
+  
+  .card-glass:hover {
+    @apply border-gold/50 shadow-gold;
+    transform: translateY(-8px);
+  }
+  
+  /* Section title styling */
+  .section-title {
+    @apply font-serif text-4xl md:text-5xl lg:text-6xl text-gold mb-4;
+  }
+  
+  .section-title-dark {
+    @apply font-serif text-4xl md:text-5xl lg:text-6xl text-brown-dark mb-4;
+  }
+  
+  /* Gold glow effect */
+  .glow-gold {
+    box-shadow: 0 0 40px rgba(201, 169, 98, 0.3);
+  }
+  
+  .text-glow-gold {
+    text-shadow: 0 0 40px rgba(201, 169, 98, 0.5);
+  }
+  
+  /* Section padding */
+  .section-padding {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+  
+  /* Container */
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+@layer utilities {
+  /* Hide scrollbar */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Animation delays */
+  .animation-delay-100 { animation-delay: 100ms; }
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-300 { animation-delay: 300ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+  .animation-delay-500 { animation-delay: 500ms; }
+  
+  /* Gold shimmer effect */
+  .shimmer-gold {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(201, 169, 98, 0.3) 50%,
+      transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1A1510;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C9A962;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
