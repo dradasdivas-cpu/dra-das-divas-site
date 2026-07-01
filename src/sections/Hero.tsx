@@ -10,10 +10,19 @@ export function Hero() {
     >
       {/* Background Image */}
       <div className="absolute inset-0">
+        {/* Desktop */}
         <img
           src="/images/hero-banner.png"
           alt="Dra das Divas - Estética Avançada"
-          className="w-full h-full object-cover object-[center_15%] md:object-[center_20%]"
+          className="hidden md:block w-full h-full object-cover"
+          style={{ objectPosition: 'center 20%' }}
+        />
+        {/* Mobile – foca na mulher (lado direito da imagem) */}
+        <img
+          src="/images/hero-banner.png"
+          alt="Dra das Divas - Estética Avançada"
+          className="block md:hidden w-full h-full object-cover"
+          style={{ objectPosition: '78% 15%' }}
         />
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-brown-dark via-brown-dark/60 to-transparent" />
