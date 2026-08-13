@@ -159,12 +159,12 @@ export function Footer() {
           </p>
           
           <p className="text-cream/40 text-sm">
-            Desenvolvido por{' '}
+            Criado por{' '}
             <a
               href="https://www.fton.com.br/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gold hover:text-gold/80 transition-colors"
+              className="text-gold hover:text-gold/80 transition-colors font-bold underline"
             >
               Faith Traffic Solution
             </a>
